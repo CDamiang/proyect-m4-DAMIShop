@@ -9,6 +9,7 @@ import Button from '../Button/Button';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+
 const MySwal = withReactContent(Swal);
 
 interface BuyButtonProps {
@@ -24,8 +25,8 @@ const BuyButton = ({ product }: BuyButtonProps) => {
     if (!user?.login) {
       router.push('/login');
     } else {
-      if (!cart.some((p: IProduct) => p.id === product.id)) {
-        addToCart(product);
+      if (!cart.some((p: IProduct) => p.id === product.id)) {        
+        addToCart(product);        
        // alert(`${product.name} added to your cart`);
         MySwal.fire({
           title: `${product.name} añadido a su carrito`,
@@ -35,6 +36,7 @@ const BuyButton = ({ product }: BuyButtonProps) => {
           toast: true,
           position: 'center',
         });
+        router.push('/products');
       } else {
         // alert(`${product.name} is already in your cart`);
         MySwal.fire({
