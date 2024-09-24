@@ -106,21 +106,21 @@ const Navbar = () => {
           <div className="text-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
-              className="mt-1 hover:bg-secondary hover:text-white rounded-lg text-base font-medium bg-primary p-2"
+              className="mt-1 hover:bg-secondary hover:text-white block rounded-lg text-base font-medium bg-primary p-2"
               onClick={closeNavbar}
             >
               INICIO
             </Link>
             <Link
               href="/products"
-              className="hover:bg-secondary hover:text-white  rounded-lg text-base font-medium bg-primary p-2"
+              className="hover:bg-secondary hover:text-white block rounded-lg text-base font-medium bg-primary p-2"
               onClick={closeNavbar}
             >
               PRODUCTOS
             </Link>
             <Link
               href="/about"
-              className="hover:bg-secondary hover:text-white rounded-lg p-2"
+              className="hover:bg-secondary hover:text-white block rounded-lg text-base font-medium bg-primary p-2"
             >
               SOBRE NOSOTROS
             </Link>
