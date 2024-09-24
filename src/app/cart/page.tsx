@@ -175,14 +175,20 @@ const Page = () => {
                 <div className="flex flex-col sm:flex-row items-center mb-4 sm:mb-0">
                   <div className="flex items-center mr-8 mb-2 sm:mb-0">
                     <FaShoppingBag className="text-3xl mr-4" />
-                    <span className="font-medium text-secondary">
-                      Cantidad de Productos: {cart.length}
+                    <span className="font-bold text-secondary">
+                      Cantidad de Productos:{' '}
+                      <span className="text-secondary/70">{cart.length}</span>
                     </span>
                   </div>
                   <div className="flex items-center">
                     <FaDollarSign className="text-secondary mr-2 text-lg" />
                     <span className="text-lg text-secondary font-medium">
-                      Precio Total: U$S{totalPrice.toFixed(2)}
+                      Precio Total:{' '}
+                      <span className="text-secondary/70">
+                        {' '}
+                        U$S
+                        {totalPrice.toFixed(2)}
+                      </span>
                     </span>
                   </div>
                 </div>

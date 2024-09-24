@@ -47,6 +47,7 @@ const BuyButton = ({ product }: BuyButtonProps) => {
           toast: true,
           position: 'center',
         });
+        router.push('/products');
       }
     }
   };
