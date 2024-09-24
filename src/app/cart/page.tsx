@@ -177,14 +177,16 @@ const Page = () => {
                     <FaShoppingBag className="text-3xl mr-4" />
                     <span className="font-bold text-secondary">
                       Cantidad de Productos:{' '}
-                      <span className="text-secondary/70">{cart.length}</span>
+                      <span className="text-secondary/70 font-medium">
+                        {cart.length}
+                      </span>
                     </span>
                   </div>
                   <div className="flex items-center">
                     <FaDollarSign className="text-secondary mr-2 text-lg" />
-                    <span className="text-lg text-secondary font-medium">
+                    <span className="text-lg font-bold text-secondary ">
                       Precio Total:{' '}
-                      <span className="text-secondary/70">
+                      <span className="text-secondary/70 font-medium">
                         {' '}
                         U$S
                         {totalPrice.toFixed(2)}
