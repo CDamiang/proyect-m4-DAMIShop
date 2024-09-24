@@ -121,6 +121,7 @@ const Navbar = () => {
             <Link
               href="/about"
               className="hover:bg-secondary hover:text-white block rounded-lg text-base font-medium bg-primary p-2"
+              onClick={closeNavbar}
             >
               SOBRE NOSOTROS
             </Link>
