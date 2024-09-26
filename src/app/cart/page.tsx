@@ -184,7 +184,7 @@ const Page = () => {
                   </div>
                   <div className="flex items-center">
                     <FaDollarSign className="text-secondary mr-2 text-lg" />
-                    <span className="text-lg font-bold text-secondary ">
+                    <span className="text-lg text-secondary font-bold">
                       Precio Total:{' '}
                       <span className="text-secondary/70 font-medium">
                         {' '}

@@ -45,9 +45,11 @@ export const validateAddress = (address: string) => {
 
 export const validatePhone = (phone: string) => {
   let validation = '';
-  const regexAddress = /.{13}/;
-  if (!regexAddress.test(phone))
-    validation = 'Tiene que contener hasta 12 numeros';
+  const regexPhone = /^\+\d{12}$/; // + seguido de 12 dígitos
+
+  if (!regexPhone.test(phone)) {
+    validation = 'El número debe comenzar con "+" seguido de 12 dígitos.';
+  }
 
   return validation;
 };

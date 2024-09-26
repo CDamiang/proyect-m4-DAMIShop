@@ -9,7 +9,6 @@ import Button from '../Button/Button';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
-
 const MySwal = withReactContent(Swal);
 
 interface BuyButtonProps {
@@ -25,9 +24,9 @@ const BuyButton = ({ product }: BuyButtonProps) => {
     if (!user?.login) {
       router.push('/login');
     } else {
-      if (!cart.some((p: IProduct) => p.id === product.id)) {        
-        addToCart(product);        
-       // alert(`${product.name} added to your cart`);
+      if (!cart.some((p: IProduct) => p.id === product.id)) {
+        addToCart(product);
+        // alert(`${product.name} added to your cart`);
         MySwal.fire({
           title: `${product.name} añadido a su carrito`,
           icon: 'success',
@@ -35,8 +34,11 @@ const BuyButton = ({ product }: BuyButtonProps) => {
           backdrop: true,
           toast: true,
           position: 'center',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            router.push('/products');
+          }
         });
-        router.push('/products');
       } else {
         // alert(`${product.name} is already in your cart`);
         MySwal.fire({
@@ -46,19 +48,15 @@ const BuyButton = ({ product }: BuyButtonProps) => {
           backdrop: true,
           toast: true,
           position: 'center',
-        });
-        router.push('/products');
+        }).then((result) => {
+          if (result.isConfirmed) {
+            router.push('/products');
+          }
+        }); 
       }
     }
   };
-  return (
-    <Button
-      
-      onClick={handleBuy}
-    >
-      Comprar
-    </Button>
-  );
-}
+  return <Button onClick={handleBuy}>Comprar</Button>;
+};
 
-export default BuyButton
+export default BuyButton;

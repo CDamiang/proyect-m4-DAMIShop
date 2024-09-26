@@ -79,7 +79,7 @@ const Dashboard = () => {
               <div className="flex items-center">
                 <FaShoppingBag className="text-3xl mr-4" />
                 <span className="text-lg text-secondary font-medium">
-                  <h6>Compra {order.id}</h6>
+                  <h6>N° de Orden: {order.id}</h6>
                   <p>{formatDate(order.date)}</p>
                 </span>
               </div>
@@ -88,20 +88,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-    // <div>
-    //   <h1>Perfil</h1>
-    //   <p>{user?.user.name}</p>
-    //   <p>{user?.user.email}</p>
-    //   {user?.user.orders?.map((order, i) => (
-    //     <div
-    //       className="flex gap-4"
-    //       key={i}
-    //     >
-    //       <h6>Compra  {order.id}</h6>
-    //       <p>{formatDate(order.date)}</p>
-    //     </div>
-    //   ))}
-    // </div>
+    
   );
 };
 
