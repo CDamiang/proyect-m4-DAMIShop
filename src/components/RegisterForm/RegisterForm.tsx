@@ -56,8 +56,13 @@ const RegisterForm = () => {
          backdrop: true,
          toast: true,
          position: 'center',
-       });
-      router.back();
+       }).then((result) => {
+         if (result.isConfirmed) {
+           router.push('/login');
+          //  router.back();
+         }
+       }); 
+      
     } else {
       // alert(response.message);
        MySwal.fire({
