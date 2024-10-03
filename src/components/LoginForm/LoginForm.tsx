@@ -40,8 +40,7 @@ const LoginForm = () => {
          position: 'center',
        });
       setUser(response);
-      router.push('/');
-     // router.back();   
+      router.back();   
       
     } else {
       //alert("Login incorrecto");
